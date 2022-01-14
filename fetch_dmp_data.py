@@ -109,7 +109,8 @@ def main():
         'https://doi.org/10.5281/zenodo.4034151',
         'https://doi.org/10.5281/zenodo.3667513',
         'https://doi.org/10.5281/zenodo.1475830',
-        'https://doi.org/10.5281/zenodo.3364522'
+        'https://doi.org/10.5281/zenodo.3364522',
+        'https://doi.org/10.5281/zenodo.3265765'
     ]
 
     status = {}
