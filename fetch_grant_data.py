@@ -88,22 +88,28 @@ def main():
     # 821964 is a EO(!) example that returns a resultset and which has 26 works so will produce
     #  meaningfule results in the notebook
     award_numbers = [
-        '633127'
         '777523',
-        '773701',
-        '767814',
         '821964'
     ]
 
     print('award_number, count_of_works, can_viz_in_notebook')
     for award_number in award_numbers:
         can_viz_in_notebook = True
-        data = get_data(award_number)
-        count_of_works = data['funder']['works']['totalCount']
-        if count_of_works == 0:
-            can_viz_in_notebook = False
 
-        print(award_number, count_of_works, can_viz_in_notebook)
+        try:
+            data = get_data(award_number)
+            count_of_works = data['funder']['works']['totalCount']
+            if count_of_works == 0:
+                can_viz_in_notebook = False
+            print(award_number, count_of_works, can_viz_in_notebook)
+        except Exception as ex:
+            print('PROBLEM - Exception Raised when getting data:')
+            print(ex)
+
+
+
+
+
 
 
 if __name__ == "__main__":
