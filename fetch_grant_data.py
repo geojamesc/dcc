@@ -31,6 +31,7 @@ def get_data(awardNumber):
         "maxWorks" : 200
     }
 
+    # TODO - modify the qgl to remove funder as per the nb since this does not seem to work...
     query = gql("""query getGrantOutputsForFunderAndAward($funderId: ID!, $funderAwardQuery: String!, $maxWorks: Int!)
     {
     funder(id: $funderId) {
