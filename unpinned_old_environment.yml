@@ -1,0 +1,21 @@
+name: dccpy37env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pandas
+  - matplotlib
+  - altair_saver
+  - ipywidgets
+  - numpy
+  - gql
+  - altair
+  - requests
+  - jupyter
+  - vega
+  - holoviews
+  - plotly
+  - pip:
+    - dfply
+prefix: /home/james/anaconda3/envs/dccpy37env
